@@ -1,0 +1,107 @@
+:root {
+    --secundary-color: #8E4106;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: #F5CF06;
+    font-family: "Righteous", sans-serif;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--secundary-color);
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-1 {
+    position: absolute;
+    top: 88px;
+    width: 1462px;
+    height: 497px;
+    font-size: 400px;
+    font-weight: 400;
+    z-index: -2;
+    color: white;
+    opacity: 20%;
+}
+
+.background-2 {
+    position: absolute;
+    top: 263px;
+    font-size: 300px;
+    color: white;
+    z-index: -1;
+}
+
+.pikachu {
+    width: 559px;
+    position: absolute;
+    top: 292px;
+}
+
+.mensagem {
+    color: var(--secundary-color);
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 117px;
+}
+
+.msg-1 {
+    font-size: 64px;
+}
+
+.msg-2 {
+    font-size: 20px;
+    width: 489px;
+}
+
+.download-button {
+    width: 411px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secundary-color);
+    position: absolute;
+    bottom: 117px;
+    right: 70px;
+    font-size: 48px;
+    font-weight: 400;
+    color: white;
+    gap: 37px;
+}
+
+footer {
+    position: absolute;
+    bottom: 24px;
+    right: 586px;
+    color: var(--secundary-color);
+    display: grid;
+    place-content: center;
+}
