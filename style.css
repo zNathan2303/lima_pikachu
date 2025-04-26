@@ -30,22 +30,14 @@ header {
     font-size: 32px;
     font-weight: 400;
     color: var(--secundary-color);
-    padding-left: 70px;
-    padding-top: 70px;
-}
-
-main {
-    position: relative;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
+    margin: 70px 70px 0 70px;
 }
 
 .background-1 {
     position: absolute;
-    top: 0;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* alterei a medida da fonte de 400px para 27vw pois 
     estava levando o footer além dos 100vh do body */
     font-size: 27vw;
@@ -57,24 +49,24 @@ main {
 
 .background-2 {
     position: absolute;
-    top: 170px;
-    /* alterei a fonte de 300px para 20vw para ficar 
-    proporcional à alteração do outro texto */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* alterei a fonte de 300px para 20vw para ficar proporcional 
+    à alteração do outro texto em background */
     font-size: 20vw;
     color: white;
     z-index: -1;
 }
 
-.content {
+main {
+    position: relative;
+    flex-grow: 1;
     display: flex;
-    align-items: end;
     justify-content: space-between;
-    height: 300px;
-    width: 100vw;
-    padding-left: 70px;
-    padding-right: 70px;
+    align-items: end;
+    margin: 0 70px;
     padding-bottom: 49px;
-    /* background: lightcoral; */
 }
 
 .mensagem {
@@ -97,9 +89,12 @@ main {
 }
 
 .pikachu {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 559px;
     height: 541px;
-    position: absolute;
 }
 
 .download-button {
@@ -133,26 +128,76 @@ footer {
 
 @media (max-width:768px) {
     header {
-        padding-left: 30px;
-        padding-top: 30px;
-        padding-bottom: 24px;
+        margin: 30px 30px 0 30px;
     }
 
     .background-1 {
-        font-size: 200px;
+        font-size: 26vw;
+        top: 78px;
     }
 
     .background-2 {
-        font-size: 180px;
+        font-size: 23.4vw;
+        top: 150px;
     }
 
-    .content {
+    main {
         flex-direction: column;
         align-items: center;
+        justify-content: end;
         gap: 11px;
+        padding-bottom: 24px;
+    }
+
+    .msg-2 {
+        text-align: center;
+    }
+
+    .pikachu {
+        top: 46%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     
     footer {
         display: none;
+    }
+}
+
+@media (max-width:360px) {
+
+    main {
+        margin: 0 0 24px 0;
+        padding-bottom: 0;
+    }
+
+    .background-1 {
+        top: 25px;
+        font-size: 100px;
+    }
+
+    .background-2 {
+        font-size: 80px;
+        top: 75px;
+    }
+
+    .msg-1 {
+        font-size: 40px;
+        width: auto;
+    }
+
+    .msg-2 {
+        display: none;
+    }
+
+    .download-button {
+        width: 312px;
+        font-size: 40px;
+    }
+
+    .pikachu {
+        width: 333px;
+        height: 322.27728271484375px;
+        
     }
 }
